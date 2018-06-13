@@ -1,32 +1,54 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
     crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <!-- Navigation-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
     <a class="navbar-brand" href="index.html">Tutaj logo i nazwa :)</a>
-    <button (click)="navbarCollapse()" class="navbar-toggler navbar-toggler-right" type="button" 
-        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+    <button (click)="navbarCollapse()" class="navbar-toggler navbar-toggler-right" type="button" aria-controls="navbarResponsive"
+        aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
-            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Podopieczni">
-                <a class="nav-link">
-                    <i class="fa fa-fw fa-table"></i>
-                    <span class="nav-link-text">Podopieczni</span>
-                </a>
+
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Wiadomosci">
+                <div class="row">
+                    <div class="col-lg-9 col-md-11 col-sm-10 col-xs-3">
+                            <a class="nav-link" [routerLink]="['/members/list']">
+                                <i class="fa fa-address-card"></i>
+                                <span class="nav-link-text">Podopieczni</span>
+                            </a>
+                    </div>
+                    <div class="col-lg-3 col-md-1 col-sm-2 col-xs-6">
+                            <a class="nav-link">
+                                    <i class="fa fa-arrow-down fa-w-14 fa-1x"></i>
+                
+                                </a>
+                    </div>
+                    
+                </div>
+
+                
+                <ul class="sidenav-second-level collapse" id="collapseComponents">
+                    <li>
+                        <a href="navbar.html">Navbar</a>
+                    </li>
+                    <li>
+                        <a href="cards.html">Cards</a>
+                    </li>
+                </ul>
             </li>
 
             <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Wiadomosci">
                 <a class="nav-link" href="tables.html">
-                    <i class="fa fa-fw fa-table"></i>
+                    <i class="fa fa-envelope"></i>
                     <span class="nav-link-text">Wiadomosci</span>
                 </a>
             </li>
             <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Wiadomosci">
-                <a class="nav-link" href="#collapseComponents" data-parent="#exampleAccordion">
-                    <i class="fa fa-fw fa-wrench"></i>
+                <a class="nav-link" data-parent="#exampleAccordion">
+                    <i class="fa fa-clipboard-check"></i>
                     <span class="nav-link-text">Raporty</span>
                 </a>
                 <ul class="sidenav-second-level collapse" id="collapseComponents">
@@ -40,7 +62,7 @@
             </li>
             <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
                 <a class="nav-link" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
-                    <i class="fa fa-fw fa-file"></i>
+                    <i class="fa fa-user-circle"></i>
                     <span class="nav-link-text">Mój profil</span>
                 </a>
                 <ul class="sidenav-second-level collapse" id="collapseExamplePages">
@@ -61,7 +83,7 @@
 
             <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
                 <a class="nav-link" href="#">
-                    <i class="fa fa-fw fa-link"></i>
+                    <i class="fa fa-shopping-cart"></i>
                     <span class="nav-link-text">Mój abonament</span>
                 </a>
             </li>
@@ -85,14 +107,16 @@
 
             </li>
             <li class="nav-item">
-                
+
             </li>
         </ul>
     </div>
 </nav>
 <div class="content-wrapper">
     <div class="container-fluid">
-        <br><br><br>
+        <br>
+        <br>
+        <br>
         <router-outlet style="margin-top:20px;"></router-outlet>
         <div style="height: 100px;"></div>
     </div>

@@ -1,0 +1,58 @@
+<form action="/hms/accommodations" method="GET"> 
+    <div class="row">
+      <div class="col-xs-6 col-md-4">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search" id="txtSearch"/>
+          <div class="input-group-btn">
+            <button class="btn btn-default" type="submit">
+                    <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+<br>
+<table class="table table-hover table-bordered table-responsive">
+    <thead class="thead-light">
+        <th>Imię</th>
+        <th>Nazwisko</th>
+        <!-- <th>Wiek</th> -->
+        <th>Wzrost</th>
+        <th>Waga</th>
+        <!-- <th>BF</th> -->
+        <th style="width: 3%;"></th>
+        <th style="width: 3%;"></th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let member of membersList" class='clickable-row' style="cursor:">
+            <td>
+                {{member.Name}}
+            </td>
+            <td>
+                {{member.Surname}}
+            </td>
+            <!-- <td>
+                {{member.Age}}
+            </td> -->
+            <td>
+                {{member.Height | height}}
+            </td>
+            <td>
+                {{member.Weight | weight }}
+            </td>
+            <!-- <td>
+                {{member.BF | percent:'1.1-5'}}
+            </td> -->
+            <td>
+                <button type="button" class="btn btn-default">
+                    <i class="fas fa-edit"></i>
+                </button>
+            </td>
+            <td>
+                <button type="button" class="btn btn-default">
+                    <i class="far fa-trash-alt"></i>
+                </button>
+            </td>
+        </tr>
+</table>

@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import * as $ from 'jquery';
+import {MediaMatcher} from '@angular/cdk/layout';
+import {ChangeDetectorRef} from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,10 +11,7 @@ import * as $ from 'jquery';
 })
 
 export class AppComponent {
- 
 
-  constructor() {
-  }
 
   slideNavToggle():void{
       $("body").toggleClass("sidenav-toggled");

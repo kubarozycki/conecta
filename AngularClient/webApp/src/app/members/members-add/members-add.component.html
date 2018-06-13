@@ -1,0 +1,19 @@
+<form #memberForm="ngForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="forFirstName">Imię</label>
+        <input [(ngModel)]="model.Name" name="Name" type="text" class="form-control" id="Name" placeholder="Podaj imię">
+    </div>
+    <div class="form-group">
+        <label for="forLastName">Nazwisko</label>
+        <input [(ngModel)]="model.Surname" name="Surname" type="text" class="form-control" id="forSurname" placeholder="Podaj nazwisko">
+    </div>
+    <div class="row">
+        
+        <div class="col-3 col-sm-1">
+            <button type="submit" class="btn btn-primary">Zapisz</button>
+        </div>
+        <div class="col-3 col-sm-1">
+            <button type="button" class="btn btn-primary">Anuluj</button>
+        </div>
+    </div>
+</form>
